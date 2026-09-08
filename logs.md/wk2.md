@@ -1,3 +1,5 @@
+Things I don't understand:
+
 - What does `<!DOCTYPE html>` mean?
 - What does `<meta charset="UTF-8">` do?
 - What does `<meta name="viewport" content="width=device-width, initial-scale=1.0">` do?
