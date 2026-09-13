@@ -1,5 +1,4 @@
 Week 1 Reflection:
-
 -This week, I worked with my OIM 3690 folder, GitHub, GitHub Pages, Markdown, and basic HTML. I learned more about how websites work and how files in a GitHub repository can be turned into a website that is accessible through a URL. I also practiced Markdown by creating headings, lists, and links, and started working with an index.html file.
 -One thing that gave me trouble was understanding how to save, commit, and push my changes so they would actually show up on GitHub. I was confused when my work appeared in VS Code but not on GitHub, but I learned the difference between saving a file locally and pushing it to GitHub. I am still getting used to the different HTML tags and what each one does.
 -Something new I picked up was how HTML is structured and how the <head> and <body> contain different types of information. I also noticed that working with AI is much more useful when I give it clear and specific instructions. Small changes in a prompt can make the response much closer to what I actually need.
