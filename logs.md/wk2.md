@@ -20,4 +20,3 @@ I learned that HTML controls the structure of a webpage, while CSS controls how 
 Working with AI
 I noticed that AI is more helpful when I ask it to explain the code instead of just asking it to give me the answer.
 
-g
