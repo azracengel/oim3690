@@ -1,4 +1,37 @@
-Hi, I'm Azra! I'm a student who enjoys working through problems that mix numbers and strategy, whether that's in finance coursework or building out a new business idea from scratch.
-Finance and investing
-Entrepreneurship and business planning
-Learning to code
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azra's Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about-me.html">About Me</a>
+        </div>
+    </nav>
+
+    <h1>Welcome to My Website</h1>
+
+    <p>
+        Hi! I'm Azra. Welcome to my website for OIM3690.
+    </p>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("show");
+        }
+    </script>
+
+</body>
+
+</html>
