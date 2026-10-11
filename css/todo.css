@@ -1,0 +1,62 @@
+
+/* Pink To-Do App Styling */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5f8;
+    margin: 0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #d63384;
+    margin-bottom: 25px;
+}
+
+form {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #e7a6c4;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ad2168;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+li {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 6px #00000015;
+}
