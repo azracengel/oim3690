@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Discount Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            background-color: #e87aa8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Member Discount Calculator</h1>
+
+        <label for="total">Cart Total ($):</label>
+        <input type="number" id="total" min="0" step="0.01">
+
+        <br>
+
+        <label>
+            <input type="checkbox" id="member">
+            I am a member
+        </label>
+
+        <br>
+
+        <button onclick="calculateDiscount()">
+            Calculate Discount
+        </button>
+
+        <h2 id="result"></h2>
+        <h3 id="finalPrice"></h3>
+    </div>
+
+    <script>
+        function getDiscount(total, isMember) {
+            if (total >= 100 && isMember) {
+                return 20;
+            } else if (total >= 100 || isMember) {
+                return 10;
+            } else {
+                return 0;
+            }
+        }
+
+        function calculateDiscount() {
+            const input = document.getElementById("total");
+            const total = Number(input.value);
+            const isMember = document.getElementById("member").checked;
+
+            if (input.value === "" || total < 0) {
+                document.getElementById("result").textContent =
+                    "Please enter a valid cart total.";
+                document.getElementById("finalPrice").textContent = "";
+                return;
+            }
+
+            const discount = getDiscount(total, isMember);
+            const finalPrice = total * (1 - discount / 100);
+
+            document.getElementById("result").textContent =
+                "Your discount: " + discount + "%";
+
+            document.getElementById("finalPrice").textContent =
+                "Final Price: $" + finalPrice.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>

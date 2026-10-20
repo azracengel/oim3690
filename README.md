@@ -6,3 +6,7 @@
 
 [GitHub Repository](https://github.com/azracengel/matcha-by-chae)
 
+## Mini Project 2 — StudyFlow
+
+- [Live Website](https://azracengel.github.io/study-session-tracker/)
+- [GitHub Repository](https://github.com/azracengel/study-session-tracker)
