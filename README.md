@@ -10,3 +10,7 @@
 
 - [Live Website](https://azracengel.github.io/study-session-tracker/)
 - [GitHub Repository](https://github.com/azracengel/study-session-tracker)
+
+## Second Lightning Talk
+
+[TikTok's AI Shopping Assistant](https://azracengel.github.io/oim3690/lightning-talk-2.html)
