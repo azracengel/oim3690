@@ -13,11 +13,13 @@ const songInput = document.getElementById("song-input");
 const addButton = document.getElementById("add-song");
 const songCount = document.getElementById("song-count");
 
-// Display all songs using a for...of loop
+// Display all songs using a for loop
 function displaySongs() {
     playlist.innerHTML = "";
 
-    for (const song of songs) {
+    for (let i = 0; i < songs.length; i++) {
+        const song = songs[i];
+
         const item = document.createElement("li");
         item.textContent = song;
 
