@@ -20,13 +20,9 @@ export default {
         model: "deepseek/deepseek-v4.1-flash-1017",
         // The longest answer you pay for, in tokens (about three quarters of a
         // word each). A longer answer is cut off at this point.
-        max_output_tokens: 1000,
-        input: prompt
-      })
-    });
-
-    // Send the model's reply back to your page as it arrived.
-    const data = await response.json();
-    return Response.json(data, { status: response.status });
-  },
-};
+max_output_tokens: 1000,
+reasoning: { effort: "none" },
+instructions: 'You are a recipe assistant. '
+  + 'Always answer in exactly three short bullet points.',
+input: prompt
+})
