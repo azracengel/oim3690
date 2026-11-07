@@ -14,3 +14,6 @@
 ## Second Lightning Talk
 
 [TikTok's AI Shopping Assistant](https://azracengel.github.io/oim3690/lightning-talk-2.html)
+
+## Mini Project 3
+[Travel Packing Assistant](https://github.com/azracengel/travel-packing-assistant)
