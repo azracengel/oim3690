@@ -23,20 +23,34 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt })
       });
-      if (!response.ok) {
+      let data;
+      try {
+        data = await response.json();
+      } catch {
         throw new Error(`Request failed: ${response.status}`);
       }
-      const data = await response.json();
-      // A model that reasons first puts a reasoning item ahead of the answer,
-      // so find the item of type message, then read its text.
-      const message = data.output.find(item => item.type === 'message');
-      return message.content[0].text;
+      if (!response.ok) {
+        throw new Error(data.error || `Request failed: ${response.status}`);
+      }
+      // Ignore reasoning items and read the generated text from the message.
+      const message = Array.isArray(data.output)
+        ? data.output.find(item => item.type === 'message')
+        : null;
+      const text = message?.content?.find(part => typeof part.text === 'string')?.text;
+      if (!text) {
+        throw new Error('The AI response did not contain answer text.');
+      }
+      return text;
     }
 
     const askBtn = document.querySelector('#askBtn');
     askBtn.addEventListener('click', async () => {
       const prompt = document.querySelector('#prompt').value;
       const answerEl = document.querySelector('#answer');
+      if (!prompt.trim()) {
+        answerEl.textContent = 'Please enter a question.';
+        return;
+      }
       // Turn the button off until the answer arrives, so a second click
       // cannot send, and pay for, a second request.
       askBtn.disabled = true;

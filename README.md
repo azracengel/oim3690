@@ -17,3 +17,6 @@
 
 ## Mini Project 3
 [Travel Packing Assistant](https://github.com/azracengel/travel-packing-assistant)
+
+## Ask AI
+[Ask AI on Vercel](https://oim3690-nine.vercel.app/ai-chat.html)
